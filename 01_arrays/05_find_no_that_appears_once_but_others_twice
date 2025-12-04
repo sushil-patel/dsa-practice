@@ -14,7 +14,7 @@ def approach1(arr):
                 count += 1
                 
         if count == 1: return arr[i]
-    # S. C. -> O(n)
+    # S. C. -> O(1)
     # T. C. -> O(n ^ 2)
     
 
@@ -34,14 +34,15 @@ def approach2b(arr):
             return key
 
     # For both 2a and 2b:
-        # S. C. -> O(n)
-        # T. C. -> O(2 * n) ~ O(n)
+        # S. C. -> O(n/2) ~ O(n)
+        # T. C. -> O(n + n/2) ~ O(n)
 
 def approach3(arr):
     xor = 0
     for i in arr:
         xor = xor ^ i
     return xor
-
+    # S. C. -> O(1)
+    # T. C. -> O(n)
 
 print(approach3(arr))
